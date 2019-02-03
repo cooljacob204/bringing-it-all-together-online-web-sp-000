@@ -6,5 +6,7 @@ class Dog
     @breed = attr[:breed]
   end
   
-  
+  def self.create_table
+    
+  end
 end
