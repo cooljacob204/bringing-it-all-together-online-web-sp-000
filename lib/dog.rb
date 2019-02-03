@@ -48,11 +48,11 @@ class Dog
   end
   
   
-  def self.find_by_id(name)
+  def self.find_by_id(id)
     sql = <<-SQL 
-         SELECT * FROM students WHERE students.name==? LIMIT 1
+         SELECT * FROM students WHERE students.id==? LIMIT 1
        SQL
-   student_row = DB[:conn].execute(sql, name)
+   student_row = DB[:conn].execute(sql, id)
    new_from_db(student_row[0])
   end
 end
