@@ -5,4 +5,6 @@ class Dog
     @name = attr[:name]
     @breed = attr[:breed]
   end
+  
+  
 end
