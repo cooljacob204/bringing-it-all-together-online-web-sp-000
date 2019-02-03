@@ -68,7 +68,10 @@ class Dog
     sql = <<-SQL 
          SELECT * FROM dogs WHERE dogs.name==? AND dogs.breed=? LIMIT 1
        SQL
-   dog_row = DB[:conn].execute(sql, dog[:name], dog[:breed])
-   return new_from_db(dog_row) if dog_row[0] 
+    dog_row = DB[:conn].execute(sql, dog[:name], dog[:breed])
+   
+    return new_from_db(dog_row) if dog_row[0] 
+   
+   
   end
 end
