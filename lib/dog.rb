@@ -46,4 +46,13 @@ class Dog
     new_dog.save
     new_dog
   end
+  
+  
+  def self.find_by_id(name)
+    sql = <<-SQL 
+         SELECT * FROM students WHERE students.name==? LIMIT 1
+       SQL
+   student_row = DB[:conn].execute(sql, name)
+   new_from_db(student_row[0])
+  end
 end
