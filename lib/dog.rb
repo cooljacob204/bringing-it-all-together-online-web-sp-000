@@ -71,7 +71,6 @@ class Dog
     dog_row = DB[:conn].execute(sql, dog[:name], dog[:breed])
    
     return new_from_db(dog_row) if dog_row[0] 
-   
-   
+    create(dog)
   end
 end
