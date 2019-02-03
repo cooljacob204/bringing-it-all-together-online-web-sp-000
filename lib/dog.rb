@@ -24,7 +24,6 @@ class Dog
   end
   
   def save
-    def save
     if @id
       sql = <<-SQL
         UPDATE dogs SET name=?, breed=? WHERE id=?
@@ -39,6 +38,5 @@ class Dog
       DB[:conn].execute(sql, @name, @grade)
       @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
     end
-  end
   end
 end
