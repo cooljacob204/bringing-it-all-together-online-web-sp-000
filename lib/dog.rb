@@ -42,8 +42,8 @@ class Dog
   end
   
   def self.create(name, breed)
-    new_student = new(name, breed)
-    new_student.save
-    new_student
+    dog = new(name, breed)
+    dog.save
+    dog
   end
 end
