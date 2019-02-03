@@ -55,7 +55,6 @@ class Dog
       :breed => row[2]
       })
   end
-
   
   def self.find_by_id(id)
     sql = <<-SQL 
@@ -63,5 +62,8 @@ class Dog
        SQL
    student_row = DB[:conn].execute(sql, id)
    new_from_db(student_row[0])
+  end
+  
+  def find_or_create_by(dog)
   end
 end
