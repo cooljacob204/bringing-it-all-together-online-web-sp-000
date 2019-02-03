@@ -27,12 +27,12 @@ class Dog
     def save
     if @id
       sql = <<-SQL
-        UPDATE dogs SET name=?, grade=? WHERE id=?
+        UPDATE dogs SET name=?, breed=? WHERE id=?
         SQL
         DB[:conn].execute(sql, @name, @grade, @id)
     else
       sql = <<-SQL
-        INSERT INTO dogs (name, grade) 
+        INSERT INTO dogs (name, breed) 
         VALUES (?, ?)
       SQL
   
