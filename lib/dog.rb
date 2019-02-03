@@ -50,7 +50,7 @@ class Dog
   
   def self.find_by_id(id)
     sql = <<-SQL 
-         SELECT * FROM students WHERE students.id==? LIMIT 1
+         SELECT * FROM dogs WHERE students.id==? LIMIT 1
        SQL
    student_row = DB[:conn].execute(sql, id)
    new_from_db(student_row[0])
